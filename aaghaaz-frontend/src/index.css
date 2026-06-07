@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- CUSTOM ANIMATIONS --- */
+@layer utilities {
+  .animate-float {
+    animation: float linear infinite;
+  }
+}
+
+@keyframes float {
+  0% {
+    left: 100%;
+    transform: translateX(0) translateY(0);
+    opacity: 0;
+  }
+  5% {
+    opacity: 1; /* Fade in quickly */
+  }
+  95% {
+    opacity: 1; /* Keep visible */
+  }
+  100% {
+    left: 0%;
+    transform: translateX(-100%) translateY(20px); /* Drift left and slightly down */
+    opacity: 0; /* Fade out as it leaves */
+  }
+}
