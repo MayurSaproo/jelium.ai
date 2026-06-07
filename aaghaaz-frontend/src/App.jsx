@@ -134,7 +134,7 @@ export default function JeliumApp() {
 
     setTimeout(async () => {
       try {
-        const response = await fetch('https://jelium-ai.onrender.com', {
+        const response = await fetch('https://jelium-ai.onrender.com/predict', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(formData)
